@@ -7,7 +7,7 @@ function App() {
   const [arr, setArr] = useState([]);
   const [generating, setGenerating] = useState(false);
   const [sorting, setSorting] = useState(false);
-  const generateArr = async (formState) => {
+  const generateArr = (formState) => {
     setGenerating(true);
     setTimeout(() => {
       let newArr = [];
@@ -38,21 +38,11 @@ function App() {
               let temp = newArr[i];
               newArr[i] = newArr[j];
               newArr[j] = temp;
-
-              console.log("New array ", newArr);
-              // setTimeout(() => {
-              //   dispatch({ type: "ADD", data: newArr });
-              // }, 100);
-              // handleClickWithPromise(newArr);
               let newStep = [...newArr];
 
               setTimeout(() => {
                 setArr([...newStep]);
               }, j * 100);
-              // setSteps((prev) => [...prev, [...newArr]]);
-              // await setCurrentArr([...newArr]);
-              // setCount((prev) => !prev);
-              // await sleep(i * 400);
             }
             if (i === arr.length - 2) {
               setSorting(false);

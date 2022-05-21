@@ -44,7 +44,7 @@ const Sidebar = ({ generateArr, sort, generating, sorting }) => {
           id="algorithm"
           variant={"outline"}
         >
-          <option value="linear">Linear</option>
+          <option value="simple">Simple</option>
           <option value="select">Selection</option>
           <option value="insert">Insertion</option>
         </Select>
